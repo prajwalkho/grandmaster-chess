@@ -1,0 +1,5 @@
+{
+  "name": "Grandmaster chess",
+  "description": "A modern, beautiful chess application. Play against the computer.",
+  "requestFramePermissions": []
+}
