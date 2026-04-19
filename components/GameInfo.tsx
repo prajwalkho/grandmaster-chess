@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { GameStatus, PieceColor } from '../types';
-import { ChessPieceIcon } from './Icons';
+
+
 
 interface GameInfoProps {
   status: GameStatus;
