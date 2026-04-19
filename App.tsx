@@ -5,11 +5,8 @@ import { GameInfo } from './components/GameInfo';
 import { getBestMove } from './services/chessEngine';
 import { GameStatus, PieceColor } from './types';
 
-const initialGame = new Chess();
-
 const App: React.FC = () => {
   const [game, setGame] = useState<Chess>(new Chess());
-  const [fen, setFen] = useState<string>(initialGame.fen());
   const [status, setStatus] = useState<GameStatus>(GameStatus.IN_PROGRESS);
   const [winner, setWinner] = useState<PieceColor | undefined>(undefined);
   const [history, setHistory] = useState<string[]>([]);
@@ -23,7 +20,6 @@ const App: React.FC = () => {
 
       if (result) {
         setGame(gameCopy);
-        setFen(gameCopy.fen());
         setHistory(gameCopy.history());
         setLastMove({ from: result.from, to: result.to });
         
@@ -62,7 +58,6 @@ const App: React.FC = () => {
               const moveResult = gameCopy.move(bestMove);
               if (moveResult) {
                 setGame(gameCopy);
-                setFen(gameCopy.fen());
                 setHistory(gameCopy.history());
                 setLastMove({ from: moveResult.from, to: moveResult.to });
 
@@ -90,7 +85,6 @@ const App: React.FC = () => {
   const handleRestart = () => {
     const newGame = new Chess();
     setGame(newGame);
-    setFen(newGame.fen());
     setHistory([]);
     setStatus(GameStatus.IN_PROGRESS);
     setWinner(undefined);
