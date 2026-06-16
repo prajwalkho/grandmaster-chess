@@ -478,6 +478,17 @@ Check out the repo for the full implementation! 👇
 
 This project is open source and available for educational and portfolio purposes.
 
+---
+
+### Author
+
+- **Name:** Prajwal Khot
+- **Email:** [prajwalkhot39@gmail.com]
+- **GitHub:** [@prajwalkho](https://github.com/prajwalkho)
+- **LinkedIn:** [www.linkedin.com/in/prajwal-p-khot]
+
+  ---
+  
 ## 🤝 Connect & Share
 
 If this project interests you:
